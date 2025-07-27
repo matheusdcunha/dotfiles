@@ -2,7 +2,14 @@ if status is-interactive
 # Commands to run in interactive sessions can go here
 end
 
+# Start ssh-agent
+if not set -q SSH_AUTH_SOCK
+    ssh-agent -c | source
+end
+
+
 fish_add_path ~/.local/bin
+set -x STARSHIP_CONFIG /Users/matheuscunha/.config/starship/starship.toml
 
 starship init fish | source
 zoxide init fish | source

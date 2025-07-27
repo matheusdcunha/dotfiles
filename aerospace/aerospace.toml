@@ -9,7 +9,8 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -65,6 +66,60 @@ automatically-unhide-macos-hidden-apps = false
     outer.bottom =     10
     outer.top =        10
     outer.right =      10
+
+
+[[on-window-detected]]
+if.app-id = 'com.apple.systemsettings'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.AppStore'
+
+run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+
+run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.apple.Preview'
+
+run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.docker.docker'
+
+run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.electron.dockerdesktop '
+
+run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.macpaw.CleanMyMac-setapp'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.getcleanshot.app-setapp'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.setapp.DesktopClient'
+run = 'layout floating'
+
 
 # 'main' binding mode declaration¿¿¿¿¿
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -128,7 +183,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-7 = 'workspace 7'
     alt-8 = 'workspace 8'
     alt-9 = 'workspace 9'
-    alt-w = 'workspace w'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
     alt-shift-1 = 'move-node-to-workspace 1'
@@ -140,7 +194,6 @@ automatically-unhide-macos-hidden-apps = false
     alt-shift-7 = 'move-node-to-workspace 7'
     alt-shift-8 = 'move-node-to-workspace 8'
     alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-w = 'move-node-to-workspace w'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     alt-tab = 'workspace-back-and-forth'
@@ -149,6 +202,8 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
+
+    alt-f = 'fullscreen'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -169,3 +224,14 @@ automatically-unhide-macos-hidden-apps = false
     down = 'volume down'
     up = 'volume up'
     shift-down = ['volume set 0', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+1 = '1'                         # Monitor sequence number from left to right. 1-based indexing
+2 = '2'                       # Main monitor
+3 = '1'                  # Non-main monitor in case when there are only two monitors
+4 = '2'                  # Non-main monitor in case when there are only two monitors
+5 = '1'
+6 = '2'
+7 = '1'
+8 = '2'
+9 = '1'
