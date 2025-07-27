@@ -68,7 +68,6 @@ automatically-unhide-macos-hidden-apps = false
     outer.right =      10
 
 # Apps that will start floating
-
 [[on-window-detected]]
 if.app-id = 'com.apple.systemsettings'
 run = 'layout floating'
@@ -99,16 +98,24 @@ if.app-id = 'com.apple.Safari'
 run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
-
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.TextEdit'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.weather'
+run = 'layout floating'
+
 [[on-window-detected]]
 if.app-id = 'com.docker.docker'
-
 run = 'layout floating'
+
 [[on-window-detected]]
 if.app-id = 'com.electron.dockerdesktop '
-
 run = 'layout floating'
+
 [[on-window-detected]]
 if.app-id = 'com.macpaw.CleanMyMac-setapp'
 run = 'layout floating'
@@ -126,11 +133,9 @@ if.app-id = 'org.qbittorrent.qBittorrent'
 run = 'layout floating'
 
 # Specific Workspace Applications
-
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = ['move-node-to-workspace 1']
-
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
