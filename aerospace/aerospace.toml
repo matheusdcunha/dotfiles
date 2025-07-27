@@ -67,6 +67,7 @@ automatically-unhide-macos-hidden-apps = false
     outer.top =        10
     outer.right =      10
 
+# Apps that will start floating
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systemsettings'
@@ -120,6 +121,49 @@ run = 'layout floating'
 if.app-id = 'com.setapp.DesktopClient'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'org.qbittorrent.qBittorrent'
+run = 'layout floating'
+
+# Specific Workspace Applications
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = ['move-node-to-workspace 1']
+
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = ['move-node-to-workspace 5']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = ['move-node-to-workspace 3']
+
+# Cursor
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92' 
+run = ['move-node-to-workspace 3']
+
+[[on-window-detected]]
+if.app-id = 'dev.warp.Warp-Stable'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'app.yaak.desktop'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = ['move-node-to-workspace 4']
 
 # 'main' binding mode declaration¿¿¿¿¿
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
